@@ -1,0 +1,19 @@
+{% extends "holzarbeit/base.html" %}
+
+{% block content %}
+    <h1>Holztabelle</h1>
+
+    <div class="container">
+        {% for holz in holz %}
+            <div class="row">
+                <div class="one column">{{ holz.name }}</div>
+                <div class="eleven columns">{{ holz.preis }}</div>
+            </div>
+        <hr>
+        {% endfor %}
+    </div>
+
+    <div class="one columns">
+        <a class="button-primary button" href="{% url 'create-holz' %}">Holzart Erstellen</a>
+    </div>
+{% endblock content %}

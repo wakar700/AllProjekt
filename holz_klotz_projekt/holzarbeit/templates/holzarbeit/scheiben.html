@@ -1,0 +1,19 @@
+{% extends "holzarbeit/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h1>Scheiben Anlegen</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <fieldset class="six columns">
+        {{ form|crispy }}
+    </fieldset>
+    <br>
+    <div class="six columns">
+        <button class="button-primary" type="submit">Anlegen</button>
+    </div>
+
+</form>
+{% endblock content %}

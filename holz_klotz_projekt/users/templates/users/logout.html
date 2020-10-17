@@ -1,0 +1,12 @@
+{% extends 'holzarbeit/base.html' %}
+
+{% block content %}
+
+<h2>You hav been logged out</h2>
+
+    <div class="container">
+        <small class="text-muted">
+            <a class="button" href="{% url 'login' %}">Login Again</a>
+        </small>
+    </div>
+{% endblock content %}

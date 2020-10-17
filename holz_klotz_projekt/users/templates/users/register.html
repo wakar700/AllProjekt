@@ -1,0 +1,20 @@
+{% extends 'holzarbeit/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+
+    <fieldset class="twelve columns">
+        <legend class="container">Hier Registrieren</legend>
+        {{ form|crispy }}
+    </fieldset>
+    <button class="button-primary" type="submit">Submit</button>
+
+    <div class="container">
+        <small>Already hav an Account?
+            <a class="button" href="{% url 'login' %}">Login</a>
+        </small>
+    </div>
+</form>
+{% endblock content %}

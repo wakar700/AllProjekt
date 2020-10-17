@@ -1,0 +1,15 @@
+{% extends "holzarbeit/base.html" %}
+
+{% block content %}
+    <h1>Übersichtsseite</h1>
+
+    <div class="container">
+        {% for holzart in holzarten %}
+            <p>Holzart: {{ holzart.holzart }}</p>
+            <p>Meter: {{ holzart.festmeter }}</p>
+            <p>Betrag: {{ holzart.betrag }}</p>
+            <p>Datum: {{ holzart.date_posted }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+{% endblock content %}
